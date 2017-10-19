@@ -22,16 +22,9 @@
         android:tint="@android:color/white"
         android:src="@drawable/ic_dog_barking"
         android:layout_height="150dp" />
-    
 
     <ImageView
         android:id="@+id/image_2"
-        android:layout_width="150dp"
-        android:src="@drawable/ic_dog_barking"
-        android:layout_height="150dp" />
-
-    <ImageView
-        android:id="@+id/image_3"
         android:layout_width="150dp"
         android:src="@drawable/ic_dog_barking"
         android:layout_height="150dp" />
