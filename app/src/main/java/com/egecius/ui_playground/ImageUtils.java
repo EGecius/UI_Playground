@@ -1,7 +1,6 @@
 package com.egecius.ui_playground;
 
 import android.content.Context;
-import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.ColorRes;
 import android.support.annotation.DrawableRes;
@@ -25,7 +24,6 @@ public class ImageUtils {
         mDrawable.mutate();
         Drawable mWrappedDrawable = DrawableCompat.wrap(mDrawable);
         DrawableCompat.setTint(mWrappedDrawable, colorInt);
-        DrawableCompat.setTintMode(mWrappedDrawable, PorterDuff.Mode.SRC_IN);
         return mWrappedDrawable;
     }
 }
