@@ -9,7 +9,7 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
 
     private ImageView image2;
-    private ImageUtils mUtils;
+    private final ImageUtils mUtils = new ImageUtils();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +23,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void applyTinting() {
         Context context = getApplicationContext();
-        mUtils = new ImageUtils();
         Drawable drawable = mUtils.toTintedDrawable(context, R.drawable.ic_dog_barking,
-                android.R.color.holo_orange_light);
+                R.color.active_hub_hive_greyscale_25);
         image2.setImageDrawable(drawable);
     }
 

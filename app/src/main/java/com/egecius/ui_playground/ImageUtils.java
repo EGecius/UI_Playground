@@ -9,10 +9,10 @@ import android.support.v4.graphics.drawable.DrawableCompat;
 
 public class ImageUtils {
 
-    Drawable toTintedDrawable(Context context, @DrawableRes int drawableRes,
-            @ColorRes int colorRes) {
-        Drawable drawable = toDrawable(context, drawableRes);
-        return toTintedDrawable(context, colorRes, drawable);
+    public Drawable toTintedDrawable(Context context, @DrawableRes int drawableToTint,
+            @ColorRes int tintColor) {
+        Drawable drawable = toDrawable(context, drawableToTint);
+        return toTintedDrawable(context, tintColor, drawable);
     }
 
     private Drawable toDrawable(Context context, @DrawableRes int drawableId) {
