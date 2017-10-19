@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void applyTinting() {
         Drawable drawableRaw = toDrawable(R.drawable.ic_dog_barking);
-        Drawable drawableTinted = getTindedDrawable(android.R.color.holo_green_light, drawableRaw);
+        Drawable drawableTinted = getTindedDrawable(android.R.color.holo_orange_light, drawableRaw);
         image2.setImageDrawable(drawableTinted);
     }
 
@@ -37,11 +37,10 @@ public class MainActivity extends AppCompatActivity {
 
     Drawable getTindedDrawable(int color, Drawable mDrawable) {
         int colorResolved = getResources().getColor(color);
-        Drawable mWrappedDrawable = mDrawable.mutate();
-        mWrappedDrawable = DrawableCompat.wrap(mWrappedDrawable);
+        mDrawable.mutate();
+        Drawable mWrappedDrawable = DrawableCompat.wrap(mDrawable);
         DrawableCompat.setTint(mWrappedDrawable, colorResolved);
         DrawableCompat.setTintMode(mWrappedDrawable, PorterDuff.Mode.SRC_IN);
-
         return mWrappedDrawable;
     }
 }
