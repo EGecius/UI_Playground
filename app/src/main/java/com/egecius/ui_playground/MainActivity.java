@@ -1,12 +1,8 @@
 package com.egecius.ui_playground;
 
-import android.graphics.PorterDuff;
+import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.annotation.ColorRes;
-import android.support.annotation.DrawableRes;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
@@ -27,21 +23,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void applyTinting() {
-        Drawable drawableRaw = toDrawable(R.drawable.ic_dog_barking);
-        Drawable drawableTinted = getTintedDrawable(android.R.color.holo_green_dark, drawableRaw);
-        image2.setImageDrawable(drawableTinted);
+        Context context = getApplicationContext();
+        Drawable drawable = new ImageUtils().toTintedDrawable(context, R.drawable.ic_dog_barking,
+                android.R.color.holo_orange_light);
+        image2.setImageDrawable(drawable);
     }
 
-    private Drawable toDrawable(@DrawableRes int drawableId) {
-        return ContextCompat.getDrawable(getApplicationContext(), drawableId);
-    }
-
-    Drawable getTintedDrawable(@ColorRes int colorRes, Drawable mDrawable) {
-        int colorInt = ContextCompat.getColor(getApplicationContext(), colorRes);
-        mDrawable.mutate();
-        Drawable mWrappedDrawable = DrawableCompat.wrap(mDrawable);
-        DrawableCompat.setTint(mWrappedDrawable, colorInt);
-        DrawableCompat.setTintMode(mWrappedDrawable, PorterDuff.Mode.SRC_IN);
-        return mWrappedDrawable;
-    }
 }
