@@ -8,6 +8,13 @@
     android:orientation="vertical"
     tools:context="com.egecius.ui_playground.MainActivity">
 
+    <Button
+        android:text="to detail activity"
+        android:id="@+id/to_detail_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
