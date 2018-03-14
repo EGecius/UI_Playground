@@ -2,6 +2,7 @@ package com.egecius.ui_playground.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 
 import com.egecius.ui_playground.R;
@@ -13,11 +14,20 @@ public class MyFragmentActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_fragment);
 
+        showFragment1();
+    }
+
+    private void showFragment1() {
+        showFragment(new Fragment1());
+    }
+
+    private void showFragment(Fragment fragment) {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.placeholder, fragment)
+                .commit();
     }
 
     void showFragment2() {
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.placeholder, new Fragment2())
-                .commit();
+        showFragment(new Fragment2());
     }
 }
