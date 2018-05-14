@@ -19,7 +19,9 @@ class Fragment1 : Fragment() {
     }
 
     private fun setOnClickListener(rootView: View) {
-        rootView.findViewById<View>(R.id.to_fragment_2).setOnClickListener { (activity as MyFragmentActivity).showFragment2() }
+        rootView.findViewById<View>(R.id.to_fragment_2).setOnClickListener {
+            (activity as MyFragmentActivity).showFragment2()
+        }
     }
 
 
