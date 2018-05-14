@@ -7,7 +7,7 @@ import android.widget.ImageView
 
 class MainActivity : AppCompatActivity() {
 
-    private var image2: ImageView? = null
+    private lateinit var image2: ImageView
     private val mUtils = ImageUtils()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         val context = applicationContext
         val drawable = mUtils.toTintedDrawable(context, R.drawable.ic_dog_barking,
                 R.color.active_hub_hive_greyscale_25)
-        image2!!.setImageDrawable(drawable)
+        image2.setImageDrawable(drawable)
     }
 
 }
