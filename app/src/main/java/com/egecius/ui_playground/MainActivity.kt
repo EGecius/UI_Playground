@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         createListener()
-        image2 = findViewById(R.id.image_2) as ImageView
+        image2 = findViewById(R.id.image_2)
 
         applyTinting()
     }
