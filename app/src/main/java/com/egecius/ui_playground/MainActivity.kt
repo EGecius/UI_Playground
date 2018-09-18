@@ -3,6 +3,7 @@ package com.egecius.ui_playground
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.view.View
 import android.widget.ImageView
 
 class MainActivity : AppCompatActivity() {
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun createListener() {
-        findViewById(R.id.to_detail_activity).setOnClickListener { showDetailActivity() }
+        findViewById<View>(R.id.to_detail_activity).setOnClickListener { showDetailActivity() }
     }
 
     private fun showDetailActivity() {
