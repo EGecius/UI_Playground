@@ -3,8 +3,8 @@ package com.egecius.ui_playground
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.view.View
 import android.widget.ImageView
-import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,13 +16,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         createListener()
-        image2 = findViewById(R.id.image_2) as ImageView
+        image2 = findViewById(R.id.image_2)
 
         applyTinting()
     }
 
     private fun createListener() {
-        findViewById<TextView>(R.id.to_detail_activity).setOnClickListener { showDetailActivity() }
+        findViewById<View>(R.id.to_detail_activity).setOnClickListener { showDetailActivity() }
     }
 
     private fun showDetailActivity() {
