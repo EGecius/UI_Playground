@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.ImageView
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun createListener() {
-        findViewById(R.id.to_detail_activity).setOnClickListener { showDetailActivity() }
+        findViewById<TextView>(R.id.to_detail_activity).setOnClickListener { showDetailActivity() }
     }
 
     private fun showDetailActivity() {
