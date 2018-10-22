@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.ImageView
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         image2 = findViewById(R.id.image_2)
 
         applyTinting()
+        applyDrawableToTextView()
     }
 
     private fun createListener() {
@@ -35,6 +37,12 @@ class MainActivity : AppCompatActivity() {
         val drawable = mUtils.toTintedDrawable(context, R.drawable.ic_dog_barking,
                 R.color.active_hub_hive_greyscale_25)
         image2.setImageDrawable(drawable)
+    }
+
+    private fun applyDrawableToTextView() {
+        val textView = findViewById<TextView>(R.id.text_view_1)
+        textView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_dog_barking, 0, 0, 0)
+        textView.text = "Dog next to R.drawable.ic_dog_barking"
     }
 
 }

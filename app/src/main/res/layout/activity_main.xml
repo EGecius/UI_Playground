@@ -36,4 +36,12 @@
         android:src="@drawable/ic_dog_barking"
         android:layout_height="150dp" />
 
+    <TextView
+        android:id="@+id/text_view_1"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="text with drawable "/>
+
 </LinearLayout>
