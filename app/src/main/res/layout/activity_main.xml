@@ -40,7 +40,16 @@
         android:id="@+id/text_view_1"
         android:textSize="20sp"
         android:textColor="@android:color/white"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="text with drawable "/>
+
+
+    <TextView
+        android:id="@+id/text_view_2"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="text with drawable "/>
 

@@ -10,7 +10,11 @@ import android.widget.TextView
 class MainActivity : AppCompatActivity() {
 
     private lateinit var image2: ImageView
+    private lateinit var textView2: TextView
+
     private val mUtils = ImageUtils()
+
+    var myText = "set from field"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         createListener()
         image2 = findViewById(R.id.image_2)
+        textView2 = findViewById(R.id.text_view_2)
 
         applyTinting()
         applyDrawableToTextView()
@@ -43,6 +48,15 @@ class MainActivity : AppCompatActivity() {
         val textView = findViewById<TextView>(R.id.text_view_1)
         textView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_dog_barking, 0, 0, 0)
         textView.text = "Dog next to R.drawable.ic_dog_barking"
+    }
+
+    override fun onStart() {
+        super.onStart()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        textView2.text = myText
     }
 
 }
